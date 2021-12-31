@@ -1,5 +1,4 @@
 require_relative 'boot'
-config.assets.initialize_on_precompile = false
 
 require 'rails/all'
 
@@ -10,6 +9,7 @@ Bundler.require(*Rails.groups)
 module HerokuDemoApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.assets.initialize_on_precompile = false
     config.load_defaults 6.0
 
     # Settings in config/environments/* take precedence over those specified here.
